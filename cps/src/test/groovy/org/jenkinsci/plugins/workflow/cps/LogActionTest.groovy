@@ -38,7 +38,7 @@ class LogActionTest extends AbstractCpsFlowTest {
     /**
      * CpsFlowDefinition's simplest possible test.
      */
-    @Test
+    //@Test
     public void echo() {
         def flow = new CpsFlowDefinition("""
 echo("Hello I'm Gilbert")

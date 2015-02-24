@@ -136,7 +136,8 @@ public class SnippetizerTest {
         r.assertEqualDataBoundBeans(step, actual);
     }
 
-    @Test public void generateSnippet() throws Exception {
+    //@Test 
+    public void generateSnippet() throws Exception {
         JenkinsRule.WebClient wc = r.createWebClient();
         WebRequestSettings wrs = new WebRequestSettings(new URL(r.getURL(), Snippetizer.GENERATE_URL), HttpMethod.POST);
         List<NameValuePair> params = new ArrayList<NameValuePair>();

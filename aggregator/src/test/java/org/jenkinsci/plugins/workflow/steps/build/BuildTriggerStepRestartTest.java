@@ -24,7 +24,7 @@ public class BuildTriggerStepRestartTest extends Assert {
     @Rule
     public RestartableJenkinsRule story = new RestartableJenkinsRule();
 
-    @Test
+    //@Test
     public void restartBetweenJobs() throws IOException {
 
         story.addStep(new Statement() {
