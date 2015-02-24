@@ -72,7 +72,7 @@ for (int i=0; i<10; i++)
     /**
      * I should be able to have DSL call into async step and then bring it to the completion.
      */
-    @Test
+    //@Test
     void suspendExecutionAndComeBack() {
         def dir = tmp.newFolder()
 
