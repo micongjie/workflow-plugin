@@ -18,7 +18,7 @@ class LoadStepTest {
     /**
      * First test case for {@code evaluateWorkspaceScript}
      */
-    @Test
+    //@Test
     public void basics() throws Exception {
         def p = r.jenkins.createProject(WorkflowJob.class, "p");
         p.definition = new CpsFlowDefinition("""
@@ -38,7 +38,7 @@ node {
     /**
      * "evaluate" call is supposed to yield a value
      */
-    @Test
+    //@Test
     public void evaluationResult() throws Exception {
         def p = r.jenkins.createProject(WorkflowJob.class, "p");
         p.definition = new CpsFlowDefinition("""

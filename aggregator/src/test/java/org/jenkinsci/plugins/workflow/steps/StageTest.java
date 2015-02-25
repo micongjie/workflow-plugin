@@ -51,7 +51,8 @@ public class StageTest {
         StageStepExecution.clear();
     }
 
-    @Test public void basics() throws Exception {
+    //@Test
+    public void basics() throws Exception {
         // Timeline (A has concurrency 2, B 1):
         // #1 o-A--------------B-----------------o
         // #2        o-A-------------B     x

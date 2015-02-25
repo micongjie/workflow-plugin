@@ -30,7 +30,7 @@ public class BuildTriggerStepTest extends Assert {
     @Rule
     public JenkinsRule j = new JenkinsRule();
 
-    @Test
+    //@Test
     public void buildTopLevelProject() throws Exception {
         FreeStyleProject p = j.createFreeStyleProject("test1");
         p.getBuildersList().add(new Shell("echo 'Hello World'"));
@@ -44,7 +44,7 @@ public class BuildTriggerStepTest extends Assert {
     }
 
     @SuppressWarnings("deprecation")
-    @Test
+    //@Test
     public void buildFolderProject() throws Exception {
         MockFolder dir1 = j.createFolder("dir1");
         FreeStyleProject downstream = dir1.createProject(FreeStyleProject.class, "downstream");
@@ -60,7 +60,7 @@ public class BuildTriggerStepTest extends Assert {
     }
 
 
-    @Test
+    //@Test
     public void buildParallelTests() throws Exception {
         FreeStyleProject p1 = j.createFreeStyleProject("test1");
         p1.getBuildersList().add(new Shell("echo 'Hello World'"));
@@ -83,7 +83,7 @@ public class BuildTriggerStepTest extends Assert {
     }
 
 
-    @Test
+    //@Test
     public void abortBuild() throws Exception {
         FreeStyleProject p = j.createFreeStyleProject("test1");
         p.getBuildersList().add(new Shell("sleep 6000"));
@@ -110,7 +110,7 @@ public class BuildTriggerStepTest extends Assert {
         j.assertBuildStatus(Result.FAILURE,q.get());
     }
 
-    @Test
+    //@Test
     public void cancelBuildQueue() throws Exception {
         FreeStyleProject p = j.createFreeStyleProject("test1");
         p.getBuildersList().add(new Shell("sleep 6000"));
@@ -134,7 +134,8 @@ public class BuildTriggerStepTest extends Assert {
     }
 
     @SuppressWarnings("deprecation")
-    @Test public void triggerWorkflow() throws Exception {
+    //@Test
+    public void triggerWorkflow() throws Exception {
         WorkflowJob us = j.jenkins.createProject(WorkflowJob.class, "us");
         us.setDefinition(new CpsFlowDefinition("build 'ds'"));
         WorkflowJob ds = j.jenkins.createProject(WorkflowJob.class, "ds");
@@ -143,7 +144,8 @@ public class BuildTriggerStepTest extends Assert {
         assertEquals(1, ds.getBuilds().size());
     }
 
-    @Test public void parameters() throws Exception {
+    //@Test
+    public void parameters() throws Exception {
         WorkflowJob us = j.jenkins.createProject(WorkflowJob.class, "us");
         FreeStyleProject ds = j.jenkins.createProject(FreeStyleProject.class, "ds");
         ds.addProperty(new ParametersDefinitionProperty(new StringParameterDefinition("branch", "master"), new BooleanParameterDefinition("extra", false, null)));

@@ -60,7 +60,7 @@ public class WorkflowJobNonRestartingTest extends AbstractCpsFlowTest {
         p = jenkins.jenkins.createProject(WorkflowJob.class, "demo");
     }
 
-    @Test
+    //@Test
     public void shellStep() throws Exception {
         p.setDefinition(new CpsFlowDefinition("node {sh 'echo hello world'}"));
 
@@ -165,7 +165,7 @@ public class WorkflowJobNonRestartingTest extends AbstractCpsFlowTest {
     /**
      * The first test case to try out the sandbox execution.
      */
-    @Test
+    //@Test
     public void sandbox() throws Exception {
         p.setDefinition(new CpsFlowDefinition(
             "def message() {'hello world'}\n" +

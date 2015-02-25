@@ -37,7 +37,8 @@ public class PushdStepTest {
 
     @Rule public RestartableJenkinsRule story = new RestartableJenkinsRule();
 
-    @Test public void basics() {
+    //@Test
+    public void basics() {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {
                 WorkflowJob p = story.j.jenkins.createProject(WorkflowJob.class, "p");
@@ -47,7 +48,8 @@ public class PushdStepTest {
         });
     }
 
-    @Test public void restarting() {
+    //@Test
+    public void restarting() {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {
                 WorkflowJob p = story.j.jenkins.createProject(WorkflowJob.class, "p");

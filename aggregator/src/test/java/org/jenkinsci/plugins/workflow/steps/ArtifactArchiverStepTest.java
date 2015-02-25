@@ -23,7 +23,7 @@ public class ArtifactArchiverStepTest extends Assert {
     /**
      * Archive and unarchive file
      */
-    @Test
+    //@Test
     public void archive() throws Exception {
         // job setup
         WorkflowJob foo = j.jenkins.createProject(WorkflowJob.class, "foo");
@@ -44,7 +44,8 @@ public class ArtifactArchiverStepTest extends Assert {
         assertEquals("hello world\n",IOUtils.toString(archivedFile.open()));
     }
 
-    @Test public void unarchiveDir() throws Exception {
+    //@Test
+    public void unarchiveDir() throws Exception {
         WorkflowJob p = j.jenkins.createProject(WorkflowJob.class, "p");
         p.setDefinition(new CpsFlowDefinition(StringUtils.join(Arrays.asList(
                 "node {",

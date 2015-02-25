@@ -40,7 +40,7 @@ assert b.log.contains("control\n")
        | Started
        p #1
 """)
-    @Test
+    //@Test
     public void globalLib() throws Exception {
         story.step {
             def dir = new File(repo.workspace,"src/foo");

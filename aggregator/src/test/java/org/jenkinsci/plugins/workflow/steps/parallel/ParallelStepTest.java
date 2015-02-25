@@ -38,7 +38,7 @@ public class ParallelStepTest extends SingleJobTestBase {
     /**
      * The first baby step.
      */
-    @Test
+    //@Test
     public void minimumViableParallelRun() throws Exception {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {
@@ -63,7 +63,7 @@ public class ParallelStepTest extends SingleJobTestBase {
     /**
      * Failure in a branch will cause the join to fail.
      */
-    @Test
+    //@Test
     public void failure_in_subflow_will_cause_join_to_fail() throws Exception {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {
@@ -125,7 +125,7 @@ public class ParallelStepTest extends SingleJobTestBase {
         });
     }
 
-    @Test
+    //@Test
     public void localMethodCallWithinBranch() {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {
@@ -149,7 +149,7 @@ public class ParallelStepTest extends SingleJobTestBase {
         });
     }
 
-    @Test
+    //@Test
     public void localMethodCallWithinBranch2() {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {
@@ -177,7 +177,7 @@ public class ParallelStepTest extends SingleJobTestBase {
         });
     }
 
-    @Test
+    //@Test
     public void localMethodCallWithinLotsOfBranches() {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {
@@ -206,7 +206,7 @@ public class ParallelStepTest extends SingleJobTestBase {
     /**
      * Restarts in the middle of a parallel workflow.
      */
-    @Test
+    //@Test
     public void suspend() throws Exception {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {

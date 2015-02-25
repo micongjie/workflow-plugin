@@ -30,7 +30,7 @@ class RestartingLoadStepTest {
     /**
      * Makes sure that loaded scripts survive persistence.
      */
-    @Test
+    //@Test
     public void persistenceOfLoadedScripts() throws Exception {
         story.step {
             WorkflowJob p = jenkins.createProject(WorkflowJob.class, "p");
@@ -90,7 +90,7 @@ class RestartingLoadStepTest {
     /**
      * The load command itself can block while it executes the script
      */
-    @Test
+    //@Test
     public void pauseInsideLoad() throws Exception {
         story.step {
             WorkflowJob p = jenkins.createProject(WorkflowJob.class, "p");

@@ -109,7 +109,8 @@ public class WaitForConditionStepTest extends SingleJobTestBase {
         });
     }
 
-    @Test public void restartDuringBody() {
+    //@Test
+    public void restartDuringBody() {
         story.addStep(new Statement() {
             @Override public void evaluate() throws Throwable {
                 p = jenkins().createProject(WorkflowJob.class, "demo");
